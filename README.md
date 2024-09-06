@@ -9,7 +9,7 @@ The model simulates two forms of coordination (artifact-based and authority-base
 For making the code available, follow the following steps.
 
 * Copy the file '056_main.R' and the folder 'data/' into a local folder.
-* Open the 'model/056_main.R' in R or RStudio.
+* Open the '056_main.R' in R or RStudio.
 * Install the packages (if not yet done) as listed at the beginning of the script.
 * Load the packages as listed at the beginning of the script after the installation commands.
 * Install the package 'coordinationSimulationModel' and load it. 
