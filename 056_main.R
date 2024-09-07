@@ -29,35 +29,18 @@ options(max.print=9999999)
 
 ##### Full experiments: #####
 
-## Running the simulation experiments takes roughly 74 hours (see requirements.txt for hardware specifications);
+## Running the simulation experiments takes roughly 6.5 hours (see requirements.txt for hardware specifications);
 ## uncomment the following line for using from previous simulation runs instead of running the simulation experiments:
 d10 <- read.csv("data/data_d10.csv",sep=",")
 
 ## Single run (with graph) over time:
 getExperiment(authority.v=c(T,F),ticks=1000,composability.v=0.070,m.v=c(100),f.v=c(1.00),turbulence.v=c(0),release.v=c(1),size=100,repetitions=1,seed=28071984,plot=T) 
 
-d10.01 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.170,0.005)),m.v=c(100)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=28071984,plot=F) 
-d10.02 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.170,0.005)),m.v=c(100)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=13012010,plot=F) 
-d10.03 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.170,0.005)),m.v=c(100)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=16012014,plot=F)
-d10.04 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.170,0.005)),m.v=c(100)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=07032018,plot=F) 
-d10.05 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.080,0.084,0.001),seq(0.086,0.089,0.001)),m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=28071984,plot=F) 
-d10.06 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.116,0.119,0.001),seq(0.121,0.124,0.001)),m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=28071984,plot=F)
-d10.09 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.116,0.119,0.001),seq(0.121,0.124,0.001)),m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=13012010,plot=F)
-d10.12 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.116,0.119,0.001),seq(0.121,0.124,0.001)),m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=075,seed=16012014,plot=F)
-d10.13 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.116,0.119,0.001),seq(0.121,0.124,0.001)),m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=050,seed=05032018,plot=F)
-d10.07 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.126,0.129,0.001),seq(0.131,0.134,0.001)),m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=28071984,plot=F)
-d10.08 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.136,0.139,0.001))                       ,m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=28071984,plot=F)
-d10.10 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.136,0.139,0.001))                       ,m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=075,seed=13012010,plot=F)
-d10.11 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.131,0.134,0.001))                       ,m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=075,seed=16012014,plot=F)
-d10.21 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.080,0.090,0.001))                       ,m.v=c(100)  ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=050,seed=26012014,plot=F)
-d10.20 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.170,0.005)),m.v=c(050)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=28071984,plot=F)
-d10.15 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.170,0.005)),m.v=c(025)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=07032018,plot=F)
-d10.16 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.170,0.005)),m.v=c(075)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=07032018,plot=F) 
-d10.17 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.190,0.005)),m.v=c(125)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=07032018,plot=F)
-d10.18 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.170,0.005)),m.v=c(150)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=07032018,plot=F)
-d10.19 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.175,0.250,0.005)),m.v=c(150)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=07032018,plot=F) 
-d10.14 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.170,0.005)),m.v=c(050)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=07032018,plot=F)
-d10 <- rbind(d10.01,d10.02,d10.03,d10.04,d10.05,d10.06,d10.07,d10.08,d10.09,d10.10,d10.11,d10.12,d10.13,d10.15,d10.16,d10.17,d10.18,d10.19,d10.20,subset(d10.21,compo<=0.085))
+d10.01 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.085,0.005)),m.v=c(100)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=28071984,plot=F) 
+d10.02 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.085,0.005)),m.v=c(100)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=13012010,plot=F) 
+d10.03 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.085,0.005)),m.v=c(100)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=16012014,plot=F)
+d10.04 <- getExperiment(authority.v=c(T,F),ticks=1000,composability.v=c(seq(0.005,0.085,0.005)),m.v=c(100)                         ,f.v=c(1.00),turbulence.v=c(0),release.v=c(1,50),size=100,repetitions=025,seed=07032018,plot=F) 
+d10 <- rbind(d10.01,d10.02,d10.03,d10.04)
 
 write.table(d10,"data/data_d10.csv",sep=",")
 
