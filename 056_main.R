@@ -198,8 +198,7 @@ x11(width=300,height=350)
   d10.agr.release$propC.diff.diff <- d10.agr.release$propC.bu.diff-d10.agr.release$propC.td.diff 
   d10.agr.release$ticks.at80perc.td.diff <- d10.agr.release$ticks.at80perc.td.release50-d10.agr.release$ticks.at80perc.td.release01
   d10.agr.release$ticks.at80perc.bu.diff <- d10.agr.release$ticks.at80perc.bu.release50-d10.agr.release$ticks.at80perc.bu.release01
-  d10.agr.release <- d10.agr.release[order(d10.agr.release$compo,d10.agr.release$m),]
-  
+  d10.agr.release <- d10.agr.release[order(d10.agr.release$compo,d10.agr.release$m),]  
   d10.agr.release$authority_direct <- d10.agr.release$dircC.td.diff
   d10.agr.release$artifact_direct <- d10.agr.release$dircC.bu.diff
   d10.agr.release$authority_indirect <- d10.agr.release$propC.td.diff.rel
@@ -226,7 +225,5 @@ x11(width=300,height=350)
     scale_shape_manual(   name="", values=c("artifact-based, relative difference"=13       ,"authority-based, relative difference"=11)) + 
     labs(title="(b) Percentage differences \n in propagation costs") + 
     theme(plot.title=element_text(size=26,face="bold"))
-  print(mean(subset(d10.agr.release,compo<=0.080)$propC.td.diff.rel))
-  print(mean(subset(d10.agr.release,compo<=0.080)$propC.bu.diff.rel))
   rm(d10.agr.release)
   
